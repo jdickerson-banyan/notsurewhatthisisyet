@@ -1,0 +1,29 @@
+{
+  "name": "notsurewhatthisisyet",
+  "version": "1.0.0",
+  "description": "app for portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdickerson-banyan/notsurewhatthisisyet.git"
+  },
+  "author": "Jessica Dickerson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdickerson-banyan/notsurewhatthisisyet/issues"
+  },
+  "homepage": "https://github.com/jdickerson-banyan/notsurewhatthisisyet#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
