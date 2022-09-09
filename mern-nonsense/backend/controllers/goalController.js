@@ -3,6 +3,11 @@ const getGoals = (req, res) => {
 }
 
 const createGoal = (req, res) => {
+    if (!req.body.test) {
+        res.status(400)
+        throw new Error('Text field needed')
+    }
+
     res.status(200).json({message: 'create goal'})
 }
 
