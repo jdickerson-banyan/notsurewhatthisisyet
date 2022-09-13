@@ -1,3 +1,3 @@
 # notsurewhatthisisyet
 
-Just creating a project for my portfolio, no details to add yet
+Currently uses Node, Express, MongoDB, Mongoose, React, Redux
