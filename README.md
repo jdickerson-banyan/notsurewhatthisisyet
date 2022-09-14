@@ -1,3 +1,3 @@
 # notsurewhatthisisyet
 
-Currently uses Node, Express, MongoDB, Mongoose, React, Redux, TypeScript, CSS, HTML5
+Currently uses Node, Express, MongoDB, Mongoose, React, Redux, CSS, HTML5
