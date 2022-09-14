@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { logout, reset } from '../features/auth/authSlice'
+import { UL } from '../style'
 
 function Header() {
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ function Header() {
             <div className='logo'>
                 <Link to='/'>GoalSetter</Link>
             </div>
-            <ul>
+            <UL>
                 {!user ?
                     (<>
                         <li>
@@ -40,7 +41,7 @@ function Header() {
                             <FaSignOutAlt /> Logout
                         </button>
                     </li>}
-            </ul>
+            </UL>
         </header>
     )
 }

@@ -5,6 +5,7 @@ import { toast } from "react-toastify"
 import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from "../components/Spinner"
+import { Paragraph } from "../style"
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -67,7 +68,7 @@ function Register() {
             <h1>
                 <FaUser /> Register
             </h1>
-            <p>Please create an account</p>
+            <Paragraph>Please create an account</Paragraph>
             <section className="form">
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
