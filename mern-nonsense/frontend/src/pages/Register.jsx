@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from "react-toastify"
 import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../features/auth/authSlice'
+import Spinner from "../components/Spinner"
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -23,8 +24,13 @@ function Register() {
         )
 
     useEffect(() => {
-        isError && toast.error(message)
-        (isSuccess || user) && navigate('/')
+        if (isError) {
+            toast.error(message)
+        }
+        
+        if (isSuccess || user) {
+            navigate('/')
+        }
 
         dispatch(reset)
 
@@ -52,6 +58,8 @@ function Register() {
             dispatch(register(userData))
         }
     }
+
+    isLoading && (<Spinner />)
 
     return (
         <>
@@ -97,7 +105,7 @@ function Register() {
                             type="password"
                             className="form-control"
                             id="password2"
-                            name="password2"
+                            name="confirmPassword"
                             value={confirmPassword}
                             placeholder="Please confirm your password"
                             onChange={onChange} />
